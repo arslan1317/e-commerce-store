@@ -12,4 +12,14 @@ const listProduct = () => async (dispatch) => {
   
 }
 
-export { listProduct }
+const detailsProduct = (productId) => (dispatch) => {
+    try{
+      dispatch({type: PRODUCT_DETAILS_REQUEST, payload: productId});
+      const {data}  = await axios.get("/api/products/" + productId);
+      dispatch({type: PRODUCT_DETAILS_SUCCESS, payload: data})
+    } catch(err) {
+      dispatch({type: PRODUCT_DETAILS_FAILED, payload: err.message})
+    }
+}
+
+export { listProduct, detailsProduct }
