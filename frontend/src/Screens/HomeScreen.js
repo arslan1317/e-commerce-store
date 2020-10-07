@@ -7,11 +7,9 @@ function HomeScreen (props) {
 
   const productList = useSelector((state) => state.productList);
   const {products, loading, error} = productList;
-  console.log('product list ', productList);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    console.log('use Effect is running');
     dispatch(listProduct())
   }, [])
 
