@@ -10,6 +10,14 @@ body {
 
 }
 
+button {
+  font-size: 1.6rem
+}
+
+.full-width {
+  width: 100%;
+}
+
 #root {
   height: 100%;
 }
@@ -245,22 +253,21 @@ a:hover {
 }
 
 .cart-list-container {
-  padding: 0;
+  padding: 1rem;
   list-style-type: none;
 }
 
 .cart-list-container li {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
   margin-bottom: 1rem;
   border-bottom: .1rem #808080 solid;
   padding-bottom: 1rem;
 }
 
 .cart-list-container li img {
-  max-width: 10rem;
-  max-height: 10rem;
+  max-width: 8rem;
+  max-height: 8rem;
 }
 
 .cart-list-container li:first-child {
@@ -280,4 +287,5 @@ a:hover {
 .cart-price {
   flex: 1 1;
   font-size: 2.5rem;
+  text-align: right;
 }
